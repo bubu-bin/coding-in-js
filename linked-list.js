@@ -10,6 +10,10 @@ class LinkedList {
     this.head = head;
   }
 
+  /**
+   * Returns the number of nodes in the linked list.
+   * @returns {number} the number of nodes in the linked list
+   */
   size() {
     let node = this.head;
     let size = 0;
@@ -22,6 +26,11 @@ class LinkedList {
     return size;
   }
 
+  /**
+   * Adds a new node with the given value to the end of the list.
+   * @param {number} value The value to add to the list
+   * @returns {void}
+   */
   add(value) {
     let node = this.head;
 
@@ -37,10 +46,19 @@ class LinkedList {
     node.next = new ListNode(value);
   }
 
+  /**
+   * Empties the list.
+   * @returns {void}
+   */
   clear() {
     this.head = null;
   }
 
+  /**
+   * Returns the node at the given value.
+   * @param {number} value The value of the node to return
+   * @returns {ListNode | null} The node with the given value, or null if it does not exist
+   */
   find(value) {
     let node = this.head;
 
@@ -55,6 +73,10 @@ class LinkedList {
     return null;
   }
 
+  /**
+   * Prints the values of the nodes in the list.
+   * @returns {void}
+   */
   print() {
     let node = this.head;
 
@@ -71,6 +93,11 @@ class LinkedList {
     console.log(">>> end print <<<");
   }
 
+  /**
+   * Deletes the node with the given value from the list.
+   * @param {number} value The value of the node to delete
+   * @returns {boolean} `true` if the node was deleted, `false` otherwise
+   */
   delete(value) {
     let node = this.head;
     let prev = null;
